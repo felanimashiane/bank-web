@@ -1,0 +1,15 @@
+.row {
+    display: -ms-inline-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.col-lg-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%
+}
+
+.errorMessage{
+    color: red;
+}
