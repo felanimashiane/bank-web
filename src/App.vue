@@ -1,30 +1,29 @@
 <script setup lang="ts">
+import HeaderComponent from "./components/layout/HeaderComponent.vue";
+import FooterComponent from "./components/layout/FooterComponent.vue";
 </script>
 
 <template>
-  <div style="display: flex; width: 100%; justify-content: center">
+  <div style="display: flex; width: 100%; justify-content: center; flex-direction: column">
+    <header> <header-component/></header>
     <div class="app-container">
-      <div class="stepper-container">
-        Stepper container
-      </div>
-      <div class="body-container">
-        <router-view /> <!-- Renders the matched route component -->
-      </div>
+        <router-view/>
     </div>
+    <footer>
+      <footer-component/>
+    </footer>
+
   </div>
 </template>
 
 <style scoped>
 .app-container{
   display: flex;
-  width: 1024px;
+  width: 100%;
   gap: 2rem;
-}
-.body-container{
-  width: 75%;
-}
-.stepper-container{
-  width: 20%;
-  float: left;
+  justify-content: center;
+  padding-bottom: 60px; /* same as footer height */
+  background-color: #ffffff;
 }
 </style>
+

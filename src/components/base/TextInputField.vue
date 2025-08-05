@@ -12,8 +12,11 @@
         v-model="value"
         @blur="handleBlur"
     />
-    <span class="errorMessage" v-if="meta.touched && errorMessage">
+    <span class="errorMessage" v-if="meta.touched && errorMessage && value">
       {{ errorMessage }}
+    </span>
+    <span class="errorMessage" v-if="meta.touched && !value && required">
+      this is required
     </span>
 
   </div>
@@ -33,16 +36,25 @@ const { value, errorMessage, meta, handleBlur } = useField(props.name);
 </script>
 <style scoped>
 .input-container{
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
 
 .input-container label {
-  font-size: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0px;
+  color: #524a4a;
 }
 
 input {
-  width: 100%;
+  max-width: 498px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #cac7c7;
+
 }
 </style>

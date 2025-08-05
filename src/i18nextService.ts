@@ -1,6 +1,6 @@
 import i18next from 'i18next';
-import casa from './assets/locales/casa.json';
-import business from './assets/locales/businessBanking.json';
+import casa from './modules/casa/i18n/casa.json';
+import business from './modules/businessBanking/i18n/businessBanking.json';
 
 i18next.init({
     lng: 'default',
