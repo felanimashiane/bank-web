@@ -7,3 +7,7 @@
 /dataSources/
 /dataSources.local.xml
 node_modules/
+.idea/bank-web.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml

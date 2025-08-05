@@ -12,7 +12,6 @@
         v-model="value"
         @blur="handleBlur"
     />
-
     <span class="errorMessage" v-if="meta.touched && errorMessage">
       {{ errorMessage }}
     </span>
