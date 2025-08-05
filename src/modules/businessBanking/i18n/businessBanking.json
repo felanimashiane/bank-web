@@ -1,0 +1,37 @@
+
+{
+  "basicDetails": {
+
+    "idNumber": {
+      "label": "ID number ",
+      "fieldName": "idNumber",
+      "isRequired": false,
+      "isValidForCountry": true,
+      "validation": {
+        "min": 6,
+        "minError": "must be at least 6 characters"
+      }
+    },
+
+    "email": {
+      "label": "Email",
+      "fieldName": "email",
+      "isRequired": false,
+      "isValidForCountry": false,
+      "validation": {
+        "email": "must be an email"
+      }
+    },
+    "name": {
+      "label": "First name",
+      "fieldName": "name",
+      "isRequired": true,
+      "isValidForCountry": true,
+      "validation": {
+        "email": "must be an email"
+      }
+    }
+
+  }
+
+}

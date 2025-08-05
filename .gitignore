@@ -24,3 +24,6 @@ yarn-error.log*
 # Optional: Git hooks & cache
 .git/hooks/
 .git/cache/
+
+package-lock.json
+
