@@ -2,7 +2,7 @@
 <template>
   <header class="header">
     <nav class="nav">
-      <h1 class="logo">My Banking APP</h1>
+      <h1 class="logo">{{ useProductStore().productName +' Step : '+ useProductStore().step}}</h1>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/casa">CASA</a></li>
@@ -12,7 +12,12 @@
   </header>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+
+import {useProductStore} from "../../stores/productStore.ts";
+useProductStore().setProductName('Welcome to your Banking App')
+</script>
 
 <style scoped>
 .header {

@@ -20,8 +20,9 @@ defineProps<{
 }
 
 .base-button.primary {
-  background-color: #003366;
+  background-color: #b54d67 ;
   color: white;
+  border: 1px solid #b54d67;
 }
 
 .base-button.secondary {
@@ -31,9 +32,12 @@ defineProps<{
 }
 
 .base-button:disabled {
-  opacity: 0.6;
   cursor: not-allowed;
-  background-color: #5e5d5d;
+  background-color: grey;
   color: white;
+}
+
+.base-button:hover:enabled{
+  font-size: 12px;
 }
 </style>

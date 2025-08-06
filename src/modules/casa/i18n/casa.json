@@ -21,8 +21,51 @@
       "validation": {
         "email": "must be an email"
       }
-    }
+    },
 
-  }
+    "name": {
+      "label": "First name",
+      "fieldName": "name",
+      "isRequired": false,
+      "isValidForCountry": false,
+      "validation": {
+        "email": "must be an email"
+      }
+    }
+  },
+
+  "personalDetails":{
+
+  "name": {
+    "label": "First name",
+    "fieldName": "name",
+    "isRequired": true,
+    "isValidForCountry": true,
+    "validation": {
+      "min": 6,
+      "minError": "must be at least 6 characters"
+    }
+  },
+    "surname": {
+      "label": "Surname",
+      "fieldName": "surname",
+      "isRequired": true,
+      "isValidForCountry": true,
+      "validation": {
+        "min": 6,
+        "minError": "must be at least 6 characters"
+      }
+    },
+    "age": {
+      "label": "Age",
+      "fieldName": "age",
+      "isRequired": true,
+      "isValidForCountry": true,
+      "validation": {
+        "min": 6,
+        "minError": "must be at least 6 characters"
+      }
+    }
+}
 
 }

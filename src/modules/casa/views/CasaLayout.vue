@@ -1,10 +1,11 @@
 <script setup lang="ts">
 
-import BasicDetailsBusiness from "./BasicDetailsBusiness.vue";
 import {useConfigStore} from "../../../stores/configStrore.ts";
 import {useProductStore} from "../../../stores/productStore.ts";
+import BasicDetailsCasa from "./BasicDetailsCasa.vue";
+import PersonalDetailsCasa from "./PersonalDetailsCasa.vue";
+useProductStore().setProductName('Open Casa Account')
 
-useProductStore().setProductName('Open Business Account')
 </script>
 
 <template>
@@ -16,7 +17,8 @@ useProductStore().setProductName('Open Business Account')
       isOTPEnabled :{{useConfigStore().isOTPEnabled}}
     </div>
     <div class="body-container">
-     <basic-details-business/>
+      <div v-if="useProductStore().step === 1"><BasicDetailsCasa/></div>
+      <div v-if="useProductStore().step === 2"><PersonalDetailsCasa/></div>
     </div>
   </div>
 </template>

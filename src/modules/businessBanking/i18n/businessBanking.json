@@ -2,10 +2,10 @@
 {
   "basicDetails": {
 
-    "idNumber": {
-      "label": "ID number ",
-      "fieldName": "idNumber",
-      "isRequired": false,
+    "businessNumber": {
+      "label": "Business registration number",
+      "fieldName": "businessNumber",
+      "isRequired": true,
       "isValidForCountry": true,
       "validation": {
         "min": 6,
@@ -14,16 +14,16 @@
     },
 
     "email": {
-      "label": "Email",
+      "label": "Business Email",
       "fieldName": "email",
       "isRequired": false,
-      "isValidForCountry": false,
+      "isValidForCountry": true,
       "validation": {
         "email": "must be an email"
       }
     },
     "name": {
-      "label": "First name",
+      "label": "Business name",
       "fieldName": "name",
       "isRequired": true,
       "isValidForCountry": true,

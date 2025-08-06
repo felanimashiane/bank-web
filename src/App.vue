@@ -1,6 +1,14 @@
 <script setup lang="ts">
+
+import {useConfigStore} from "./stores/configStrore.ts";
+import {ConfigurationService} from "./services/ConfigurationService.ts";
 import HeaderComponent from "./components/layout/HeaderComponent.vue";
 import FooterComponent from "./components/layout/FooterComponent.vue";
+
+const configurationService = new ConfigurationService();
+
+const configStore = useConfigStore();
+configStore.loadConfigFromServer(configurationService.loadConfig());
 </script>
 
 <template>

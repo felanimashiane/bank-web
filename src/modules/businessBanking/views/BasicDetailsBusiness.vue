@@ -9,9 +9,9 @@ import BaseButton from "../../../components/base/BaseButton.vue";
 const t = (key: string) => i18next.t(key, { ns: 'business' });
 
 const validationSchema = toTypedSchema(z.object({
-      idNumber: t('basicDetails.idNumber.isRequired') ?
-          z.string().min(Number(t('basicDetails.idNumber.validation.min')), t('basicDetails.idNumber.validation.minError')).nonempty() :
-          z.string().min(Number(t('basicDetails.idNumber.validation.min')), t('basicDetails.idNumber.validation.minError')).optional(),
+      businessNumber: t('basicDetails.businessNumber.isRequired') ?
+          z.string().min(Number(t('basicDetails.businessNumber.validation.min')), t('basicDetails.businessNumber.validation.minError')).nonempty() :
+          z.string().min(Number(t('basicDetails.businessNumber.validation.min')), t('basicDetails.businessNumber.validation.minError')).optional(),
 
       name: t('basicDetails.name.isRequired') ?
           z.string().nonempty():
@@ -24,7 +24,8 @@ const validationSchema = toTypedSchema(z.object({
 
     // HOW TO REMOVE VALIDATIONS FROM validationScheme ??
     // CREATE A METHOD TO ADD THESE VALIDATIONS FROM
-      // WIll GET A LIST AND ADD USING LOOP
+    // DATA PERSIST
+
 );
 
 validationSchema
@@ -35,21 +36,12 @@ const {meta} = useForm({ validationSchema });
 <template>
   <form class="basic-container">
     <div class="form-content">
-      <div class="row"  v-if="t('basicDetails.idNumber.isValidForCountry')">
+      <div class="row"  v-if="t('basicDetails.businessNumber.isValidForCountry')">
         <div class="col-lg-12">
           <TextInputField
-              :name="t('basicDetails.idNumber.fieldName')"
-              :label="t('basicDetails.idNumber.label')"
-              :required="t('basicDetails.idNumber.isRequired')"
-          />
-        </div>
-      </div>
-
-      <div class="row" v-if="t('basicDetails.email.isValidForCountry')">
-        <div class="col-lg-12">
-          <TextInputField
-              :name="t('basicDetails.email.fieldName')"
-              :label="t('basicDetails.email.label')"
+              :name="t('basicDetails.businessNumber.fieldName')"
+              :label="t('basicDetails.businessNumber.label')"
+              :required="t('basicDetails.businessNumber.isRequired')"
           />
         </div>
       </div>
@@ -60,6 +52,15 @@ const {meta} = useForm({ validationSchema });
               :name="t('basicDetails.name.fieldName')"
               :label="t('basicDetails.name.label')"
               :required="t('basicDetails.name.isRequired')"
+          />
+        </div>
+      </div>
+
+      <div class="row" v-if="t('basicDetails.email.isValidForCountry')">
+        <div class="col-lg-12">
+          <TextInputField
+              :name="t('basicDetails.email.fieldName')"
+              :label="t('basicDetails.email.label')"
           />
         </div>
       </div>
